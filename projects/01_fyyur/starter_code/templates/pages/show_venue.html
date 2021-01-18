@@ -7,7 +7,8 @@
 			{{ venue.name }}
 		</h1>
 		<p class="subtitle">
-			ID: {{ venue.id }}
+			ID: {{ venue.id }}  
+		<button id='delete-venue' data-id='{{ venue.id }}'>Delete</button>
 		</p>
 		<div class="genres">
 			{% for genre in venue.genres %}
@@ -76,4 +77,17 @@
 </section>
 
 {% endblock %}
+<script>
+	const delete_venue_button = document.getElementById('#delete-venue');
+	delete_venue_button.onclick = (e) => {
+		const toDeleteId = e.target.dataset['id'];
+		fetch('/venues/'+toDeleteId, {
+			method: 'POST',
+		}).then(function(){
+			console.log('Deleted '+toDeleteId)
+		}).catch(function(error) {
+			console.log('Could not delete ' +toDeleteId)
+		});
+	}
+</script>
 
