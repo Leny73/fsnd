@@ -75,10 +75,8 @@
 		{% endfor %}
 	</div>
 </section>
-
-{% endblock %}
 <script>
-	const delete_venue_button = document.getElementById('#delete-venue');
+	const delete_venue_button = document.getElementById('delete-venue');
 	delete_venue_button.onclick = (e) => {
 		const toDeleteId = e.target.dataset['id'];
 		fetch('/venues/'+toDeleteId, {
@@ -90,4 +88,7 @@
 		});
 	}
 </script>
+
+{% endblock %}
+
 
