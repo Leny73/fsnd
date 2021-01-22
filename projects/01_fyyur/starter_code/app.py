@@ -264,13 +264,13 @@ def create_venue_submission():
 @app.route('/venues/<venue_id>', methods=['DELETE'])
 def delete_venue(venue_id):
     try:
-        venue = Venue.query.get(venue_id)
-        db.session.delete(venue)
-        db.session.commit()
+      venue = Venue.query.get(venue_id)
+      db.session.delete(venue)
+      db.session.commit()
     except:
-        db.session.rollback()
+      db.session.rollback()
     finally:
-        db.session.close()
+      db.session.close()
     return render_template('pages/home.html')
 
 #  Artists
@@ -382,7 +382,7 @@ def edit_artist(artist_id):
 def edit_artist_submission(artist_id):
   try:
     artist = Artist.query.get(artist_id)
-    for key  in request.form:
+    for key in request.form.to_dict():
       artist[key] = request.form[key]
     
     db.session.commit()
@@ -403,7 +403,7 @@ def edit_venue(venue_id):
 def edit_venue_submission(venue_id):
   try:
     venue = Venue.query.get(venue_id)
-    for key in request.form:
+    for key in request.form.to_dict():
       venue[key] = request.form[key]
     
     db.session.commit()
@@ -411,8 +411,6 @@ def edit_venue_submission(venue_id):
     db.session.rollback()
   finally:
     db.session.close()
-  # TODO: take values from the form submitted, and update existing
-  # venue record with ID <venue_id> using the new attributes
   return redirect(url_for('show_venue', venue_id=venue_id))
 
 #  Create Artist
