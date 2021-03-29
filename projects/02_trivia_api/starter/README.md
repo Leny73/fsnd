@@ -33,7 +33,7 @@ This will install all of the required packages we selected within the `requireme
 
 - [Flask](http://flask.pocoo.org/)  is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 
-- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database. You'll primarily work in app.py and can reference models.py. 
+- [SQLAlchemy](https://www.sqlalchemy.org/) is the Python SQL toolkit and ORM we'll use handle the lightweight sqlite database.
 
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
@@ -274,7 +274,6 @@ The API will retern three error types when requests fail:
 #### Post /questions
 - Creates a new questions using the submitted question, answer, difficulty and category. Returns the id of the current questions, success value, total questions.
 * Example: <code> curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"questions": "Test_questions", "answer": "Test_answer", "difficulty": 1, "category": 1}'</code>
-
 Example response if a search term is not included:
 <code>
 {
