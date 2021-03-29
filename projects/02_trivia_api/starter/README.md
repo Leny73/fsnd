@@ -274,13 +274,15 @@ The API will retern three error types when requests fail:
 #### Post /questions
 - Creates a new questions using the submitted question, answer, difficulty and category. Returns the id of the current questions, success value, total questions.
 * Example: <code> curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"questions": "Test_questions", "answer": "Test_answer", "difficulty": 1, "category": 1}'</code>
-* Example response if a search term is not included:
+
+Example response if a search term is not included:
 <code>
 {
   "success": true
 }
 </code>
-* Example response if a search term is inlcuded:
+
+Example response if a search term is inlcuded:
 <code>
 {
     'success': True,
