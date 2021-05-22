@@ -1,0 +1,204 @@
+{
+	"id": "c97105ca-9341-4296-9e68-bc7324eaeb00",
+	"name": "Events Manager",
+	"timestamp": "2021-05-22T14:47:01.856Z",
+	"collection_id": "1457601c-a9e9-4f49-9557-e33a5f28ebe3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e1e07de0-c6e9-4332-96eb-aa37b86b9d65",
+			"name": "http://127.0.0.1:5000/events",
+			"url": "http://127.0.0.1:5000/events",
+			"time": 430,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				430
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "fac15869-84d6-4726-b110-43052ab88356",
+			"name": "http://127.0.0.1:5000/events",
+			"url": "http://127.0.0.1:5000/events",
+			"time": 73,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "97555b9b-6cc1-4f10-855f-14f0c7486688",
+			"name": "http://127.0.0.1:5000/events/4",
+			"url": "http://127.0.0.1:5000/events/4",
+			"time": 82,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "34fec2a8-9262-4abd-8cd1-5ca7a725d3ff",
+			"name": "http://127.0.0.1:5000/events/3",
+			"url": "http://127.0.0.1:5000/events/3",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "36fa5031-6ada-4bde-b22a-517bab3e9e2f",
+			"name": "http://127.0.0.1:5000/locations",
+			"url": "http://127.0.0.1:5000/locations",
+			"time": 61,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				61
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "64b984c4-819a-4d62-ae9f-174f36c81ee7",
+			"name": "http://127.0.0.1:5000/locations",
+			"url": "http://127.0.0.1:5000/locations",
+			"time": 80,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 840,
+	"collection": {
+		"requests": [
+			{
+				"id": "e1e07de0-c6e9-4332-96eb-aa37b86b9d65",
+				"method": "POST"
+			},
+			{
+				"id": "fac15869-84d6-4726-b110-43052ab88356",
+				"method": "GET"
+			},
+			{
+				"id": "97555b9b-6cc1-4f10-855f-14f0c7486688",
+				"method": "DELETE"
+			},
+			{
+				"id": "34fec2a8-9262-4abd-8cd1-5ca7a725d3ff",
+				"method": "PATCH"
+			},
+			{
+				"id": "36fa5031-6ada-4bde-b22a-517bab3e9e2f",
+				"method": "GET"
+			},
+			{
+				"id": "64b984c4-819a-4d62-ae9f-174f36c81ee7",
+				"method": "POST"
+			}
+		]
+	}
+}

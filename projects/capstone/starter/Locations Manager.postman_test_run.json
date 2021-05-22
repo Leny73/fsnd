@@ -1,0 +1,204 @@
+{
+	"id": "2c3099e6-f5f6-4d58-a2c9-c4aa136e601d",
+	"name": "Locations Manager",
+	"timestamp": "2021-05-22T14:27:25.396Z",
+	"collection_id": "c9978d48-bb39-442a-b329-6c51e64a17a0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e99ac631-9c37-442c-ac9b-2c3a2a23678f",
+			"name": "http://127.0.0.1:5000/locations",
+			"url": "http://127.0.0.1:5000/locations",
+			"time": 74,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				74
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "8b79db9a-5b46-42ee-85b3-f066f1f79b2f",
+			"name": "http://127.0.0.1:5000/locations",
+			"url": "http://127.0.0.1:5000/events",
+			"time": 78,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "85939ebe-9859-4be9-aaa4-ec7df5a0380d",
+			"name": "http://127.0.0.1:5000/events",
+			"url": "http://127.0.0.1:5000/events",
+			"time": 73,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "362aced1-d409-4b21-8fcd-f0fe8d8611e3",
+			"name": "http://127.0.0.1:5000/events/1",
+			"url": "http://127.0.0.1:5000/events/1",
+			"time": 87,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "f4ef65dc-1aa7-49b9-84ec-782cb0b81b39",
+			"name": "http://127.0.0.1:5000/events",
+			"url": "http://127.0.0.1:5000/events",
+			"time": 73,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "21f642db-d71c-449f-bf18-cfb89ed412ba",
+			"name": "http://127.0.0.1:5000/events/1",
+			"url": "http://127.0.0.1:5000/events/1",
+			"time": 116,
+			"responseCode": {
+				"code": 401,
+				"name": "UNAUTHORIZED"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				116
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 501,
+	"collection": {
+		"requests": [
+			{
+				"id": "e99ac631-9c37-442c-ac9b-2c3a2a23678f",
+				"method": "POST"
+			},
+			{
+				"id": "8b79db9a-5b46-42ee-85b3-f066f1f79b2f",
+				"method": "GET"
+			},
+			{
+				"id": "85939ebe-9859-4be9-aaa4-ec7df5a0380d",
+				"method": "POST"
+			},
+			{
+				"id": "362aced1-d409-4b21-8fcd-f0fe8d8611e3",
+				"method": "DELETE"
+			},
+			{
+				"id": "f4ef65dc-1aa7-49b9-84ec-782cb0b81b39",
+				"method": "GET"
+			},
+			{
+				"id": "21f642db-d71c-449f-bf18-cfb89ed412ba",
+				"method": "PATCH"
+			}
+		]
+	}
+}

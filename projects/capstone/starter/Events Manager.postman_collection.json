@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "1457601c-a9e9-4f49-9557-e33a5f28ebe3",
+		"name": "Events Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0MDk3LCJleHAiOjE2MjE3MDEyOTcsImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsImdldDpsb2NhdGlvbnMiLCJwYXRjaDpldmVudHMiLCJwb3N0OmV2ZW50cyJdfQ.RuV_skSSM6mXbUnGT-aapFOi1zfDXRIWbF8A6e-sA6PijXLQ-gBpD_kEaRC_7EYJ6SBv-BH9G4bvMvLNRhCsT8Km-C3mkn1d7GoqAlOxd8QRknaLdsbjGdH4M3fNDl_fbsqX66eGba_ycK7lLiKjneQ-ZdpE1l6dewkHNEIXnicOSU5NskTT4IN2cjj0zgCy3TdA2K5hbi-Se5wj2GqvWITNfG_Mhkj-tpEPoWsi456Lkae7j5rtLBn4U7NPGwn1056J2z_mmzCMtM9x3pdpS-dqJiQuh8NXo7obUYJNofNnysn4mLZuqmuX9PSpgaPFih5xrI1CKdIQxwkoW5lKDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"testEvent\",\n    \"locations\": \"testLocation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "add event as an Event Manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0MDk3LCJleHAiOjE2MjE3MDEyOTcsImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsImdldDpsb2NhdGlvbnMiLCJwYXRjaDpldmVudHMiLCJwb3N0OmV2ZW50cyJdfQ.RuV_skSSM6mXbUnGT-aapFOi1zfDXRIWbF8A6e-sA6PijXLQ-gBpD_kEaRC_7EYJ6SBv-BH9G4bvMvLNRhCsT8Km-C3mkn1d7GoqAlOxd8QRknaLdsbjGdH4M3fNDl_fbsqX66eGba_ycK7lLiKjneQ-ZdpE1l6dewkHNEIXnicOSU5NskTT4IN2cjj0zgCy3TdA2K5hbi-Se5wj2GqvWITNfG_Mhkj-tpEPoWsi456Lkae7j5rtLBn4U7NPGwn1056J2z_mmzCMtM9x3pdpS-dqJiQuh8NXo7obUYJNofNnysn4mLZuqmuX9PSpgaPFih5xrI1CKdIQxwkoW5lKDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "get events as event manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events/4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0NTA5LCJleHAiOjE2MjE3MDE3MDksImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsInBhdGNoOmV2ZW50cyIsInBvc3Q6ZXZlbnRzIl19.R8RkiVJtn1PB8gM-teSxMsR2Kbabpvuw4DU3s4qFvBAUFBCl_TyjeQmGP8I-kIhCjS_LNeK4vPrHLaF6xyqJB_YY8u4vxTiyrtzt0x_sTbIOKnGZxrZHM7qxrDqSP2bsWKPde9FR8kdM4D3oXxlg1-ax_PPJ-NoiReWGpl51mjvs0avqn8wE5ZkkZp4MkO5B9VrphlFssHcKGPT6ZvnMGvy2xX0RSyRqfHBTNMukLkmCnoazffYHHK9EGRLOzPqsnwFjPD4Ve3WV_s6xS8uaFCH-wE9UUEVYwuUxKegNrcqkKr_k7RIfdLrJzeAqYY2WJAZBP_Cw3A605-cCwzzfgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"4"
+					]
+				},
+				"description": "delete events as an event manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events/3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0NTA5LCJleHAiOjE2MjE3MDE3MDksImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsInBhdGNoOmV2ZW50cyIsInBvc3Q6ZXZlbnRzIl19.R8RkiVJtn1PB8gM-teSxMsR2Kbabpvuw4DU3s4qFvBAUFBCl_TyjeQmGP8I-kIhCjS_LNeK4vPrHLaF6xyqJB_YY8u4vxTiyrtzt0x_sTbIOKnGZxrZHM7qxrDqSP2bsWKPde9FR8kdM4D3oXxlg1-ax_PPJ-NoiReWGpl51mjvs0avqn8wE5ZkkZp4MkO5B9VrphlFssHcKGPT6ZvnMGvy2xX0RSyRqfHBTNMukLkmCnoazffYHHK9EGRLOzPqsnwFjPD4Ve3WV_s6xS8uaFCH-wE9UUEVYwuUxKegNrcqkKr_k7RIfdLrJzeAqYY2WJAZBP_Cw3A605-cCwzzfgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"location\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"3"
+					]
+				},
+				"description": "Edit Event as an event manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0NTA5LCJleHAiOjE2MjE3MDE3MDksImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsInBhdGNoOmV2ZW50cyIsInBvc3Q6ZXZlbnRzIl19.R8RkiVJtn1PB8gM-teSxMsR2Kbabpvuw4DU3s4qFvBAUFBCl_TyjeQmGP8I-kIhCjS_LNeK4vPrHLaF6xyqJB_YY8u4vxTiyrtzt0x_sTbIOKnGZxrZHM7qxrDqSP2bsWKPde9FR8kdM4D3oXxlg1-ax_PPJ-NoiReWGpl51mjvs0avqn8wE5ZkkZp4MkO5B9VrphlFssHcKGPT6ZvnMGvy2xX0RSyRqfHBTNMukLkmCnoazffYHHK9EGRLOzPqsnwFjPD4Ve3WV_s6xS8uaFCH-wE9UUEVYwuUxKegNrcqkKr_k7RIfdLrJzeAqYY2WJAZBP_Cw3A605-cCwzzfgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"location\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/locations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"locations"
+					]
+				},
+				"description": "Get locations as an Event manager should fail"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0NTA5LCJleHAiOjE2MjE3MDE3MDksImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsInBhdGNoOmV2ZW50cyIsInBvc3Q6ZXZlbnRzIl19.R8RkiVJtn1PB8gM-teSxMsR2Kbabpvuw4DU3s4qFvBAUFBCl_TyjeQmGP8I-kIhCjS_LNeK4vPrHLaF6xyqJB_YY8u4vxTiyrtzt0x_sTbIOKnGZxrZHM7qxrDqSP2bsWKPde9FR8kdM4D3oXxlg1-ax_PPJ-NoiReWGpl51mjvs0avqn8wE5ZkkZp4MkO5B9VrphlFssHcKGPT6ZvnMGvy2xX0RSyRqfHBTNMukLkmCnoazffYHHK9EGRLOzPqsnwFjPD4Ve3WV_s6xS8uaFCH-wE9UUEVYwuUxKegNrcqkKr_k7RIfdLrJzeAqYY2WJAZBP_Cw3A605-cCwzzfgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"location\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/locations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"locations"
+					]
+				},
+				"description": "ADding locations as an event manager should fail"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYTkxNjE2YTdlYmM5MDA2YTRjY2UyZiIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjIxNjk0NTA5LCJleHAiOjE2MjE3MDE3MDksImF6cCI6ImFHdTBoY0U1M240VjBZTEVuN2NJRzhQQXMwZEJKaWl5Iiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6ZXZlbnRzIiwiZ2V0OmV2ZW50cyIsInBhdGNoOmV2ZW50cyIsInBvc3Q6ZXZlbnRzIl19.R8RkiVJtn1PB8gM-teSxMsR2Kbabpvuw4DU3s4qFvBAUFBCl_TyjeQmGP8I-kIhCjS_LNeK4vPrHLaF6xyqJB_YY8u4vxTiyrtzt0x_sTbIOKnGZxrZHM7qxrDqSP2bsWKPde9FR8kdM4D3oXxlg1-ax_PPJ-NoiReWGpl51mjvs0avqn8wE5ZkkZp4MkO5B9VrphlFssHcKGPT6ZvnMGvy2xX0RSyRqfHBTNMukLkmCnoazffYHHK9EGRLOzPqsnwFjPD4Ve3WV_s6xS8uaFCH-wE9UUEVYwuUxKegNrcqkKr_k7RIfdLrJzeAqYY2WJAZBP_Cw3A605-cCwzzfgg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

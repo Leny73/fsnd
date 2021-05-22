@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 import os
 
-# database_name = "capstone"
-# database_path = "postgres://{}:{}@{}/{}".format('lyuben', 'temp123!','localhost:5432', database_name)
-database_path = os.environ['DATABASE_URL']
+database_name = "capstone"
+database_path = "postgres://{}:{}@{}/{}".format('lyuben', 'temp123!','localhost:5432', database_name)
+# database_path = os.environ['DATABASE_URL']
 db = SQLAlchemy()
 
 '''
@@ -58,6 +58,17 @@ class Event(db.Model):
       'name': self.name,
       'location': self.location}
 
+  def insert(self):
+    db.session.add(self)
+    db.session.commit()
+
+  def update(self):
+    db.session.commit()
+  
+  def delete(self):
+    db.session.delete(self)
+    db.session.commit()
+
 class Location(db.Model):  
   __tablename__ = 'Location'
 
@@ -69,6 +80,9 @@ class Location(db.Model):
     self.name = name
     self.location = location
 
+  def insert(self):
+    db.session.add(self)
+    db.session.commit()
   def format(self):
     return {
       'id': self.id,

@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "c9978d48-bb39-442a-b329-6c51e64a17a0",
+		"name": "Locations Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"testlocation\",\n    \"location\": \"testlocation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/locations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"locations"
+					]
+				},
+				"description": "Add location as a Locations Manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "get locations as a locations Manager"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "Get events as a Locations Manager should fail"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"1"
+					]
+				},
+				"description": "Deleting an event as a Locations Manager should fail"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "Get events as a Locations Manager should fail"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/events/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401)",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"testlocation\",\n    \"location\": \"testlocation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/events/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"events",
+						"1"
+					]
+				},
+				"description": "Edit Events should fail"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdJbkN0bnQwUjg4Rll6ZnlIbWtsZCJ9.eyJpc3MiOiJodHRwczovL3R3Ym0uZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTE2MDIyNTQ0NTkzMjM0MzQ0MDU0IiwiYXVkIjoiY2Fwc3RvbmUiLCJpYXQiOjE2MjE2OTI3NTksImV4cCI6MTYyMTY5OTk1OSwiYXpwIjoiYUd1MGhjRTUzbjRWMFlMRW43Y0lHOFBBczBkQkppaXkiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDpsb2NhdGlvbnMiLCJwb3N0OmxvY2F0aW9ucyJdfQ.l48WwloSXRI9pMIPx4AlzcG4XIcgtsdLbJnNTTfzCvBHWCCP2prejWDSfhpfz_dRnaufocEoeqf70PxvFsOnxHVrQJh56y1RHcTheKqhcn7ATBEGsLo8bMF6a6YfiYxtaGQnUNxRdYuMb7ZNFM22Xe1RGJcE2HApQf013JaC7Rv89bZ836Cj2juQ06Cdjt1r1mHstuUpkjrzPJuxii_Npdd3WqmIGBN77Jj1ufVIpf3ufzDQIGchTcmnK4EEQp4QFyLH0XGuc_iLtQTztUZMUyAz-ASYGzsxsBw6r7UgGg8gYu9RlbelW3aQKDdWQawJjh_Do8ZxcmW0t-Ga1JmUzQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
