@@ -10,7 +10,7 @@ of the events that are going to be held and all sacred locations in Bulgaria whe
 
 #### PIP Dependencies
 
-Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
+Install dependencies by naviging to the `/starter` directory and running:
 
 ```bash
 pip install -r requirements.txt
