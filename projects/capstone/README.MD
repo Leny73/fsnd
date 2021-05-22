@@ -70,9 +70,106 @@ run `python3 test_app.py` command to check results
 I included Postman tests to check locally how my application works as it was easier to debug.
 
 
+### API
 
+#### Error Types
+The API will retern three error types when requests fail:
+* 400: Bad Request!
+* 404 Resource Not Found
+* 422 Not Processable
+* 405 Method Not Allowed
+* 401 Unauthorized
 
+#### Endpoints
 
+##### GET /events
+- Returns a list of event objects, value of success and a total number of event
+* Sample : In terminal with curl installe type: <code>curl https://brothermap.herokuapp.com/events -H "Content-Type: application/json, 'Authorization': Event_Manager_jwt"</code>
+* Sample Response : <code>
+  {
+    "data": [
+        {
+            "id": 1,
+            "location": "event",
+            "name": "event"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "location": "event",
+            "name": "event"
+        }
+    ],
+    "success": true,
+    "total_events": 1
+}
+</code>
 
+##### POST /events
+- Creates a new event using the submitted title and location. Return success value.
+* Example: <code> curl https://brothermap.herokuapp.com/events -X POST -H "Content-Type: application/json, 'Authorization': Event_Manager_jwt" -d '{"name":"Masons", "location":"Jean Palu"}'</code>
+* Example response: <code>
+  {
+    "success": true
+}
+</code>
 
+##### DELETE /events/{book_id}
+- Deletes a selected event id. Returns event id, success value.
+* Example: <code> curl -X DELETE https://brothermap.herokuapp.com/events/1 -H "Content-Type: application/json, 'Authorization': Event_Manager_jwt"</code>
+* Example Response: <code> 
+  {
+    "delete": 1,
+    "success": true
+}
+</code>
 
+##### PATCH /events/{event_id}
+- If provided, updates rating of the specific event_id. Return all events.
+* Example: <code> curl -X PATCH https://brothermap.herokuapp.com/events1 -H "Content-Type: application/json, 'Authorization': Event_Manager_jwt" -d '{"name":"newEventPatched","location":"newLocationsPatched"}'
+* Example Response: <code>
+  {
+    "events": [
+        {
+            "id": 1,
+            "location": "newLocationsPatched",
+            "name": "newEventPatched"
+        },
+        {
+            "id": 2,
+            "location": null,
+            "name": "newEvent"
+        }
+    ],
+    "success": true
+}
+  </code>
+##### GET /locations
+- Returns a list of locations objects, value of success and a total number of locations
+* Sample : In terminal with curl installe type: <code>curl https://brothermap.herokuapp.com/locations -H "Content-Type: application/json, 'Authorization': Locations_Manager_jwt"</code>
+* Sample Response : <code>
+  {
+    "locations": [
+        {
+            "id": 1,
+            "location": "Location",
+            "name": "Location Name"
+        }
+    ],
+    "success": true,
+    "total_events": 1
+}
+</code>
+
+##### POST /Locations
+- Creates a new location using the submitted title and location. Return success value.
+* Example: <code> curl https://brothermap.herokuapp.com/locations -X POST -H "Content-Type: application/json, 'Authorization': Location_Manager_jwt" -d '{"name":"Location Other", "location":"Timboktu"}'</code>
+* Example response: <code>
+  {
+    "success": true
+}
+</code>
+
+  
+ 
