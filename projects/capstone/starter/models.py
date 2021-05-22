@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 import os
 
-# database_name = "capstone"
-# database_path = "postgres://{}:{}@{}/{}".format('lyuben', 'temp123!','localhost:5432', database_name)
-database_path = os.environ['DATABASE_URL']
+database_name = "capstone"
+database_path = "postgres://{}:{}@{}/{}".format('lyuben', 'temp123!','localhost:5432', database_name)
+#database_path = os.environ['DATABASE_URL']
 db = SQLAlchemy()
 
 '''
@@ -30,16 +30,20 @@ class Person(db.Model):
   id = Column(Integer, primary_key=True)
   name = Column(String)
   catchphrase = Column(String)
+  role = Column(String)
 
-  def __init__(self, name, catchphrase=""):
+  def __init__(self, name, catchphrase="", role=""):
     self.name = name
     self.catchphrase = catchphrase
+    self.role = role
 
   def format(self):
     return {
       'id': self.id,
       'name': self.name,
-      'catchphrase': self.catchphrase}
+      'catchphrase': self.catchphrase,
+      'role': self.role
+    }
 
 class Event(db.Model):  
   __tablename__ = 'Events'
