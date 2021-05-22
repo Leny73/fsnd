@@ -130,8 +130,6 @@ testresources==2.0.1
 toml==0.10.2
 tornado==6.1
 traitlets==5.0.5
-ubuntu-advantage-tools==20.3
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
