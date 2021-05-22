@@ -92,7 +92,6 @@ pyasn1==0.4.8
 pycairo==1.16.2
 pycodestyle==2.7.0
 pycparser==2.20
-pycups==1.9.73
 Pygments==2.8.0
 PyJWT==1.7.1
 pylint==2.6.0
