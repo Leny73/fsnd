@@ -48,11 +48,19 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ### Setup Auth0 with Roles
 
-#### Locations Manager
-Person which manages locations add, view
+#### Location Manager
+Person which manages locations add, view with permissions:
 
-#### Events Manager
-Person which manages events add, view, delete, edit 
+get:locations
+post:locations
+
+#### Event Manager
+Person which manages events add, view, delete, edit with permissions:
+
+delete:events
+get:events
+post:events
+patch:events
 
 
 ### Unit Tests
