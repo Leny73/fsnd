@@ -1,5 +1,7 @@
 # Brother Map - Capstone 
-This is an application to showcase all the events and locations connected with the White Brotherhood in Bulgaria. It will be integrated with a Map to showcase all
+
+## Motivation
+While being part of an organisation and travelling around I found that it is very difficult to travel to specific places without the knowledge of where exactly they are. Most of these locations aren't on Google Maps and are very difficult to find. My motivation was to create a map that has these specific locations which will help the members of the organisation navigate easily and eventually more people will know about how to go to specific locations and what kind of events are held at these locations.This is an application to showcase all the events and locations connected with the White Brotherhood in Bulgaria. It will be integrated with a Map to showcase all
 of the events that are going to be held and all sacred locations in Bulgaria where the Master Petar Deunoff was travelling and visiting specific areas.
 
 ## Instructions
@@ -44,20 +46,14 @@ flask run --reload
 
 The `--reload` flag will detect file changes and restart the server automatically.
 
-### Setup Auth0
+### Setup Auth0 with Roles
 
-I have set up 2 roles Locations Manager and Event Manager that have specific permissions in the app to make requests
-without these permissions you wouldn't be able to make requests to the application.
+#### Locations Manager
+Person which manages locations add, view
 
-AUTH0_DOMAIN = 'twbm.eu.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'capstone'
-CLIENT_ID = 'aGu0hcE53n4V0YLEn7cIG8PAs0dBJiiy'
-CALLBACK_URL = 'https://brothermap.herokuapp.com/'
+#### Events Manager
+Person which manages events add, view, delete, edit 
 
-Using https://{{YOUR_DOMAIN}}/authorize?audience={{API_IDENTIFIER}}&response_type=token&client_id={{YOUR_CLIENT_ID}}&redirect_uri={{YOUR_CALLBACK_URI}}
-
-This will generate an API token which can be used based on permissions to make requests via curl or postman.
 
 ### Unit Tests
 
